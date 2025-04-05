@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro De Usuário</title>
+</head>
+<link rel="stylesheet" href="/Produtos 3/index2.html">
+<link rel="stylesheet" href="/Cadastro 2/style3.css">
+</header>
+<body>
+    <div class="container">
+    <h1 class="cabecalho">
+        <img src="/Recursos/Imagem icone.png" alt="Logo C.I.A" width="60" height="60" class="logo-marca">
+        C.I.A
+    </h1>
+    <h3>Loja C.I.A. Somos uma loja de agentes secretos especializada na melhora de infiltrações.
+    </h3>
+    <div class="logins">
+        <form onsubmit="return cadastrar(event)">
+            <input type="text" id="newuser" name="email" placeholder="Novo Usuário"
+            class="input-campo" required><br> 
+            <input type="text" id="confirmuser" name="email" placeholder="Confirmar Usuário"
+            class="input-campo" required><br>
+            <input type="password" id="newpass" name="nova-senha" placeholder="Nova senha" class="input-campo" required><br>
+            <input type="password" id="confirmpass" name="nova-senha" placeholder="Confirmar Senha" class="input-campo" required><br>
+            <Button onclick="cadastrar()">Cadastrar</Button><br>
+            <p id="message" class="message"></p>
+            
+            <script>
+                function cadastrar() {
+    event.preventDefault();
+
+var newuser = document.getElementById("newuser").value;
+var confirmuser = document.getElementById("confirmuser").value;
+var newpass = document.getElementById("newpass").value;
+var confirmpass = document.getElementById("confirmpass").value;
+var message = document.getElementById("message");
+
+
+
+if (newuser === confirmuser && newpass === confirmpass) {
+message.style.color = "green";
+message.textContent = "Cadastro Realizado com Sucesso";
+window.location.href ="/Produtos 3/index2.html";
+} else {
+message.style.color = "red";
+message.textContent = "Cadastro Fracassado";
+}
+
+}
+            </script>
+        </div>
+        </form>
+    </div>
+</html>

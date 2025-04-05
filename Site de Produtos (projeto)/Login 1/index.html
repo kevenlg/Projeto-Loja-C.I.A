@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login do Usuário</title>
+</head>
+<link rel="stylesheet" href="/Produtos 3/index2.html">
+<link rel="stylesheet" href="/Login 1/style.css">
+<link rel="stylesheet" href="/Login 1/Menssage.js">
+</header>
+<body>
+    <div class="container">
+    <h1 class="cabecalho">
+        <img src="/Recursos/Imagem icone.png" alt="Logo C.I.A" width="100" height="100">
+        <h1>C.I.A</h1>
+    </h1>
+    <h1>Loja C.I.A. Somos uma loja de agentes secretos especializada na melhora de infiltrações.
+    </h1>
+    <div class="logins">
+        <form onsubmit="return login(event)">
+            <input type="text" id="username" name="User" placeholder="username"
+            class="input-campo" required><br>
+            <input type="password" id="password" name="password" placeholder="password" class="input-campo" required><br>
+            <Button onclick="login()">Entrar</Button><br>
+            <p id="message" class="message"></p>
+            <script>
+                function login() {
+    event.preventDefault();
+
+var user = document.getElementById("username").value;
+var pass = document.getElementById("password").value;
+var message = document.getElementById("message");
+
+var userCorreto = "kevenlg";
+var senhaCorreta = "seteoito";
+
+if (user === userCorreto && pass === senhaCorreta) {
+message.style.color = "green";
+message.textContent = "Login Realizado com Sucesso";
+window.location.href ="/Produtos 3/index2.html";
+} else {
+message.style.color = "red";
+message.textContent = "Login Fracassado";
+}
+
+}
+            </script>
+        </div>
+        </form>
+    </div>
+</html>
